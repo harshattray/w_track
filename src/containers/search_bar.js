@@ -10,10 +10,12 @@ export default class SearchBar extends Component{
         this.setState({term:event.target.value});
         // console.log(event.target.value);
     }
-
+    onFormSubmit(event){
+        event.preventDefault();
+    }
     render(){
         return(
-            <form>
+            <form onSubmit = {this.onFormSubmit}>
             <div className="ui fluid action input">
   <input type="text" placeholder="5 day forecast in any city " value={this.state.term} onChange={this.onInputChange}/>
   <div className="ui button">Search</div>

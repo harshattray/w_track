@@ -1,4 +1,10 @@
 import React , { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import { fetchWeather } from '../actions/index';
+
+
 
 export default class SearchBar extends Component{
     constructor(props){
@@ -23,4 +29,15 @@ export default class SearchBar extends Component{
           </form>
         );
     }
+}
+
+//Dispatch action fuctions are binded to state to be accessible above
+function mapDispatchToProps(dispatch){
+    return bindActionCreators({weather:fetchWeather},dispatch);
+}
+
+function mapStateToProps(state){
+   return{
+       weather : weather
+   }
 }

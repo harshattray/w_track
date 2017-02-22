@@ -7,7 +7,7 @@ const  ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?&appid=${API_
 
 
 export function fetchWeather(city){
-    const url = `${ROOT_URL}&q=${city},in`;
+    const url = `${ROOT_URL}&q=${city},IN`;
     const request = axios.get(url);
 
     return{

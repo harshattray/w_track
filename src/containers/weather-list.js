@@ -10,6 +10,12 @@ class WeatherList extends Component{
             const temp = cityData.list.map((weather)=>{
                  return weather.main.temp;
             });
+            const pressure = cityData.list.map((weather)=>{
+                 return weather.main.pressure;
+            });
+            const humidities = cityData.list.map((weather)=>{
+                 return weather.main.humidity;
+            });
             const colors_array = ['Blue','Red', 'green','orange'];
             const colors = colors_array[Math.floor(Math.random() * colors_array.length)];
 
@@ -19,6 +25,12 @@ class WeatherList extends Component{
                  <td>{name}</td>
                  <td>
                   <Chart data={temp} color={colors}/>
+                  </td>
+                  <td>
+                  <Chart data={pressure} color={colors}/>
+                  </td>
+                  <td>
+                  <Chart data={humidities} color={colors}/>
                  </td>
                  </tr>
              );

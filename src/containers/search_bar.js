@@ -26,7 +26,7 @@ class SearchBar extends Component{
     render(){
         return(
             <form onSubmit = {this.onFormSubmit}>
-            <div className="ui fluid action input">
+            <div className="ui fluid action input search-bar">
   <input type="text" placeholder="5 day forecast in any city " value={this.state.term} onChange={this.onInputChange}/>
   <div className="ui button">Search</div>
           </div>

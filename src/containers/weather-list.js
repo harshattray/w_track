@@ -10,12 +10,15 @@ class WeatherList extends Component{
             const temp = cityData.list.map((weather)=>{
                  return weather.main.temp;
             });
+            const colors_array = ['Blue','Red', 'green','orange'];
+            const colors = colors_array[Math.floor(Math.random() * colors_array.length)];
+
             console.log(temp);
              return(
                  <tr key={name}>
                  <td>{name}</td>
                  <td>
-                  <Chart data={temp} color="red"/>
+                  <Chart data={temp} color={colors}/>
                  </td>
                  </tr>
              );

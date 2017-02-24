@@ -1,25 +1,11 @@
-# ReduxSimpleStarter
+## Synopsis
+w_track is a simple weather tracking app built using React and redux using the simple starter boiler plate, utilising the openweather api.
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+## Installation
 
-###Getting Started###
+-  Run npm install , this should install all the dependencies already listed in the package.json.
+ - Utilises sparkline to render the graphs
 
-There are two methods for getting started with this repo.
 
-####Familiar with Git?#####
-Checkout this repo, install dependencies, then start the gulp process with the following:
-
-```
-	> git clone git@github.com:StephenGrider/ReduxSimpleStarter.git
-	> cd ReduxSimpleStarter
-	> npm install
-	> npm start
-```
-
-####Not Familiar with Git?#####
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-	> npm install
-	> npm start
-```
+## Contributors
+https://github.com/harshattray

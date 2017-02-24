@@ -1,6 +1,7 @@
 import React , { Component } from 'react';
 import  { connect } from 'react-redux';
 import Chart from '../components/spark-chart';
+import GMap from  '../components/Map';
 
 
 class WeatherList extends Component{
@@ -16,13 +17,17 @@ class WeatherList extends Component{
             const humidities = cityData.list.map((weather)=>{
                  return weather.main.humidity;
             });
+            const {lat,lon} = cityData.city.coord;
             const colors_array = ['Blue','Red', 'green','orange'];
             const colors = colors_array[Math.floor(Math.random() * colors_array.length)];
 
             console.log(temp);
              return(
                  <tr key={name}>
-                 <td>{name}</td>
+                 <td>
+                  <GMap lat={lat} lon={lon}/>
+                  </td>
+                  <td>{name}</td>
                  <td>
                   <Chart data={temp} color={colors}/>
                   </td>
@@ -41,6 +46,7 @@ class WeatherList extends Component{
           <table className="table table-hover">
             <thead>
             <tr>
+          <th>Map</th>
           <th>City</th>
           <th>Temperature</th>
           <th>Pressure</th>
